@@ -5,10 +5,10 @@ import React, { useState, useCallback } from 'react';
 export function Assignment2() {
     const [, forceRender] = useState(0);
 
-    const handleReRender = () => {
+    const handleReRender = useRef(() => {
         // Update state to force re-render
         forceRender(Math.random());
-    };
+    });
 
     return (
         <div>
